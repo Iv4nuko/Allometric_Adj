@@ -18,6 +18,7 @@ normalizar_medida <- function(data, Y_name, X_name, X0 = NULL, b = NULL) {
   
   return(data)
 }
+library(vegan)
 var_to_normallo=c('MO_mg','otolith.area','otolith.length','otolith.width','otolith.perimeter')
 for (var in var_to_normallo){
   otolitos.data=
