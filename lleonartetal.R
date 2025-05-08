@@ -18,15 +18,14 @@ normalizar_medida <- function(data, Y_name, X_name, X0 = NULL, b = NULL) {
   
   return(data)
 }
+proceso=function(data,range,X,group_name){
 if (!require("dplyr")) {
   install.packages("dplyr")
-  library(dplyr)
-}
-name_vars=function(data,range){
+  library(dplyr)}
   var_to_normallo=colnames(data)[range]
- return(var_to_normallo)}
 for (var in var_to_normallo){
-  otolitos.data=
-    otolitos.data %>% group_by(Species)%>%
-    group_modify(~normalizar_medida(.x,Y_name = var,X_name = 'TL._mm')) %>%
+  data=
+    data %>% group_by(group_name)%>%
+    group_modify(~normalizar_medida(.x,Y_name = var,X_name = X)) %>%
     ungroup()}
+  }
