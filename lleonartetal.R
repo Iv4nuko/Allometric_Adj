@@ -22,7 +22,9 @@ if (!require("dplyr")) {
   install.packages("dplyr")
   library(dplyr)
 }
-var_to_normallo=c('MO_mg','otolith.area','otolith.length','otolith.width','otolith.perimeter')
+name_vars=function(data,range){
+  var_to_normallo=Colnames(data)[range],
+ return(var_to_normallo)}
 for (var in var_to_normallo){
   otolitos.data=
     otolitos.data %>% group_by(Species)%>%
