@@ -23,7 +23,7 @@ if (!require("dplyr")) {
   library(dplyr)
 }
 name_vars=function(data,range){
-  var_to_normallo=Colnames(data)[range]
+  var_to_normallo=colnames(data)[range]
  return(var_to_normallo)}
 for (var in var_to_normallo){
   otolitos.data=
